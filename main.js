@@ -115,35 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var elements = document.querySelectorAll(".abt-title, .avatar, .abt-subtitle, .abt-text, .des-subtitle, .des-text, .skills-title, .img-container, .me-subtitle, .facts, .services-title, .serv-subtitle, .serv-info, .grdes-title, .samples, .more-btn, .web-title, .samples.sec, .more-btn.last, .work-title, .work-subtitle, .work-content, .gr-title, .logos, .thumbnails, .banners, .webdes-title, .site-preview, .nav-list-not-fixed, .links-title, .links-subtitle, .links-subtitle-other");
-
-  function checkVisibility() {
-    elements.forEach(function(element, index) {
-      if (isElementInViewport(element)) {
-        setTimeout(function() {
-          element.classList.add("show");
-        }, index * 10);
-      }
-    });
-  }
-
-  function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  checkVisibility();
-  window.addEventListener("scroll", checkVisibility);
-});
-
-
-
 
 
 
